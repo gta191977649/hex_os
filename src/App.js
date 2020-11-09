@@ -4,6 +4,7 @@ import termial from './img/icons/termial.png'
 import music from './img/icons/music.png'
 import pc from './img/icons/pc.png'
 import internet from './img/icons/internet.png'
+import start from "./img/icons/start.png"
 function App() {
   return (
     <div className="App hex-os">
@@ -11,7 +12,7 @@ function App() {
       <div className="hex-menu-top">
         <div className="hex-menu-top-content">
           <div className="hex-menu-item">
-            <li><b>HEX OS</b></li>
+            <li className="start"><b>HEX OS</b></li>
             <li><a href="#">アプリケーション</a></li>
             <li><a href="#">情報</a></li>
           </div>
@@ -54,6 +55,12 @@ function App() {
           <img src={termial} alt=""/>
           <p>Termial</p>
         </li>
+      </div>
+      <div className="hex-desktop-version">
+        HEX OS (Alpha)
+        <br/>
+        Build: 502<br/>
+        Powered by: Project Sparrow 2020
       </div>
     </div>
   );
