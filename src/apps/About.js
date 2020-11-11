@@ -3,7 +3,7 @@ import Window from "../compoments/Window"
 export default class About extends Component {
     render() {
         return (
-            <Window title={this.props.title} content={
+            <Window x={this.props.x}  y={this.props.y} title={this.props.title} onClose={this.props.onClose} content={
                 <React.Fragment >
                    <h1>HEX OS</h1>
                   <small>Development version</small>

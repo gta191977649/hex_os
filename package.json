@@ -9,9 +9,12 @@
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-draggable": "^4.4.3",
+    "react-iframe": "^1.8.0",
     "react-resizable": "^1.11.0",
+    "react-rnd": "^10.2.3",
     "react-scripts": "4.0.0",
-    "web-vitals": "^0.2.4"
+    "web-vitals": "^0.2.4",
+    "webamp": "^1.4.1-beta05"
   },
   "scripts": {
     "start": "react-scripts start",
