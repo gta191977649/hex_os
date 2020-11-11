@@ -64,7 +64,7 @@ export default class App extends Component {
         process.push({
           "title":"Browser",
           "pid":pid,
-          "pointer": <Browser url="https://buncho.moe"  x={this.state.mouse_x} y={this.state.mouse_y} title="Browser" onClose={()=>{this.closeApp(pid)}} key={pid}/>
+          "pointer": <Browser url="https://buncho.moe"  x={this.state.mouse_x} y={this.state.mouse_y} title="HeX Internet Explorer" onClose={()=>{this.closeApp(pid)}} key={pid}/>
         })
         this.setState({process:process})
         break
@@ -73,7 +73,7 @@ export default class App extends Component {
         process.push({
           "title":"Browser",
           "pid":pid,
-          "pointer": <Browser url="https://archive.sparrow.moe/hana/"  x={this.state.mouse_x} y={this.state.mouse_y} title="Browser" onClose={()=>{this.closeApp(pid)}} key={pid}/>
+          "pointer": <Browser url="https://archive.sparrow.moe/hana/"  x={this.state.mouse_x} y={this.state.mouse_y} title="HeX Internet Explorer" onClose={()=>{this.closeApp(pid)}} key={pid}/>
         })
         this.setState({process:process})
         break
@@ -110,6 +110,13 @@ export default class App extends Component {
                   <li onClick={()=>{this.openApp("ABOUT")}}>このHEXについて</li>
                   <hr/>
                   <li>システム設置</li>
+                </div>
+              </li>
+              <li>
+                アプリ
+                <div className="hex-menu-dropdown">
+                  <li onClick={()=>{this.openApp("BBS")}}>HeX Internet Explorer</li>
+                  <li onClick={()=>{this.openApp("MUSIC")}}>Winamp</li>
                 </div>
               </li>
               
