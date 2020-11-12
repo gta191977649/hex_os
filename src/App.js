@@ -17,6 +17,7 @@ import DateTime from "./widgets/DateTime"
 import About from "./apps/About"
 import Webamp from "./apps/Webamp"
 import Browser from "./apps/Browser"
+import HexMediaPlayer from "./apps/HexMediaPlayer/HexMediaPlayer"
 
 export default class App extends Component {
 
@@ -33,7 +34,7 @@ export default class App extends Component {
   }
   componentDidMount() {
    // this.openApp("ABOUT")
-   //this.openApp("MUSIC")
+   
    document.addEventListener('mousemove', (e) => {
       this.setState({mouse_x: e.pageX, mouse_y: e.pageY});
    });
@@ -78,6 +79,15 @@ export default class App extends Component {
         this.setState({process:process})
         break
       }
+      case "MediaPlayer":{
+        process.push({
+          "title":"HeX Media Player",
+          "pid":pid,
+          "pointer": <HexMediaPlayer  x={this.state.mouse_x} y={this.state.mouse_y} title="HeX Media Player" onClose={()=>{this.closeApp(pid)}} key={pid}/>
+        })
+        this.setState({process:process})
+        break;
+      }
       default:{
 
       }
@@ -116,6 +126,7 @@ export default class App extends Component {
                 アプリ
                 <div className="hex-menu-dropdown">
                   <li onClick={()=>{this.openApp("BBS")}}>HeX Internet Explorer</li>
+                  <li onClick={()=>{this.openApp("MediaPlayer")}}>Hex Media Player</li>
                   <li onClick={()=>{this.openApp("MUSIC")}}>Winamp</li>
                 </div>
               </li>

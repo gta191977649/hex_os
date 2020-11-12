@@ -16,7 +16,7 @@ export default class Window extends Component {
     </div>
     return (
      
-      <Rnd style={style} default={{x:this.props.x,y:this.props.y}}>
+      <Rnd enableResizing={this.props.enableResizing} style={style} default={{x:this.props.x,y:this.props.y}}>
         <div className="hex-window" >
           <div className="hex-window-title">
           {this.props.control ? controls : ""}

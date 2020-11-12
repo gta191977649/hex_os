@@ -1,0 +1,10 @@
+.hex-player-control-area li {
+    padding:3px;
+    list-style: none;
+    height:30px;
+    width:30px;
+}
+.hex-player-control-area li:hover {
+    padding:2px;
+    border: 1px solid #000000;
+}

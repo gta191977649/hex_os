@@ -19,8 +19,8 @@ export default class componentName extends Component {
     }
     render() {
     return (
-        <Window x={this.props.x} y={this.props.y} title={this.props.title} control={true} onClose={this.props.onClose} content={
-           <div className="hex-browser" style={hex_browser}>
+        <Window enableResizing={true} x={this.props.x} y={this.props.y} title={this.props.title} control={true} onClose={this.props.onClose} content={
+            <div className="hex-browser" style={hex_browser}>
                <div className="hex-browser-toolbar" style={hex_toolbar}>
                 <input onChange={(e)=>{this.onUrlEnter(e.target.value)}} style={{width:"100%"}} value={this.state.inputs} type="text"/>
                 <button onClick={()=>{this.setState({url:this.state.inputs})}}>GO</button>
@@ -30,7 +30,6 @@ export default class componentName extends Component {
                 height="100%"
                 id="myId"
                 className="browser"
-             
                />
            </div>
         }/>
@@ -39,10 +38,10 @@ export default class componentName extends Component {
 }
 
 const hex_browser = {
-    width:"100%",
-    height: "100%",
+    height:"98%",
     display:"flex",
     flexDirection:"column",
+    padding:"5px",
 }
 
 const hex_toolbar = {
