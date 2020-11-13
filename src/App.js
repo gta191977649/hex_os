@@ -19,6 +19,8 @@ import Webamp from "./apps/Webamp"
 import Browser from "./apps/Browser"
 import HexMediaPlayer from "./apps/HexMediaPlayer/HexMediaPlayer"
 
+//test mv
+import mv from "./disk/video/✩  恋をしよう   LIP×LIP  歌ってみた　 ver.かぴ.1080p.mp4"
 export default class App extends Component {
 
   constructor(props) {
@@ -39,7 +41,7 @@ export default class App extends Component {
       this.setState({mouse_x: e.pageX, mouse_y: e.pageY});
    });
   }
-  openApp(name) {
+  openApp(name,param = null) {
     let process = this.state.process
     let pid = process.length
     switch(name) {
@@ -83,7 +85,7 @@ export default class App extends Component {
         process.push({
           "title":"HeX Media Player",
           "pid":pid,
-          "pointer": <HexMediaPlayer  x={this.state.mouse_x} y={this.state.mouse_y} title="HeX Media Player" onClose={()=>{this.closeApp(pid)}} key={pid}/>
+          "pointer": <HexMediaPlayer src={param} x={this.state.mouse_x} y={this.state.mouse_y} title="HeX Media Player" onClose={()=>{this.closeApp(pid)}} key={pid}/>
         })
         this.setState({process:process})
         break;
@@ -178,6 +180,10 @@ export default class App extends Component {
           <li>
             <img src={termial} alt=""/>
             <p>Konsole</p>
+          </li>
+          <li onClick={()=>{this.openApp("MediaPlayer",mv)}}>
+            <img src={termial} alt=""/>
+            <p>test-video.sh</p>
           </li>
           <li onDoubleClick={()=>{
             if(this.state.easter_egg >=2) {
