@@ -46,6 +46,10 @@
 
 
 /* menus */
+.hex-window .hex-menu-top-content { 
+  box-shadow: none;
+}
+
 .hex-menu-top {
   position: relative;
   top: 0px;
@@ -230,7 +234,6 @@
 }
 .hex-window-content {
   background: #e3e3e3;
-  
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
   height: 100%;

@@ -19,7 +19,7 @@ export default class componentName extends Component {
     }
     render() {
     return (
-        <Window enableResizing={true} x={this.props.x} y={this.props.y} title={this.props.title} control={true} onClose={this.props.onClose} content={
+        <Window width={1224} height={720} enableResizing={true} x={this.props.x} y={this.props.y} title={this.props.title} control={true} onClose={this.props.onClose} content={
             <div className="hex-browser" style={hex_browser}>
                <div className="hex-browser-toolbar" style={hex_toolbar}>
                 <input onChange={(e)=>{this.onUrlEnter(e.target.value)}} style={{width:"100%"}} value={this.state.inputs} type="text"/>

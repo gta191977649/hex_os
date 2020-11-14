@@ -16,7 +16,7 @@ export default class Window extends Component {
     </div>
     return (
      
-      <Rnd enableResizing={this.props.enableResizing} style={style} default={{x:this.props.x,y:this.props.y}}>
+      <Rnd  dragHandleClassName="hex-window-title"  enableResizing={this.props.enableResizing} style={style} default={{x:this.props.x,y:this.props.y,width:this.props.width,height:this.props.height}}>
         <div className="hex-window" >
           <div className="hex-window-title">
           {this.props.control ? controls : ""}

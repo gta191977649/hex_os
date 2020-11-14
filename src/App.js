@@ -18,6 +18,7 @@ import About from "./apps/About"
 import Webamp from "./apps/Webamp"
 import Browser from "./apps/Browser"
 import HexMediaPlayer from "./apps/HexMediaPlayer/HexMediaPlayer"
+import Konsole from "./apps/Konsole/Konsole"
 
 //test mv
 import mv from "./disk/video/✩  恋をしよう   LIP×LIP  歌ってみた　 ver.かぴ.1080p.mp4"
@@ -36,6 +37,7 @@ export default class App extends Component {
   }
   componentDidMount() {
    // this.openApp("ABOUT")
+   //this.openApp("Konsole")
    
    document.addEventListener('mousemove', (e) => {
       this.setState({mouse_x: e.pageX, mouse_y: e.pageY});
@@ -90,6 +92,15 @@ export default class App extends Component {
         this.setState({process:process})
         break;
       }
+      case "Konsole":{
+        process.push({
+          "title":"Konsole",
+          "pid":pid,
+          "pointer": <Konsole src={param} x={this.state.mouse_x} y={this.state.mouse_y} title="Konsole" onClose={()=>{this.closeApp(pid)}} key={pid}/>
+        })
+        this.setState({process:process})
+        break;
+      }
       default:{
 
       }
@@ -129,6 +140,7 @@ export default class App extends Component {
                 <div className="hex-menu-dropdown">
                   <li onClick={()=>{this.openApp("BBS")}}>HeX Internet Explorer</li>
                   <li onClick={()=>{this.openApp("MediaPlayer")}}>Hex Media Player</li>
+                  <li onClick={()=>{this.openApp("Konsole")}}>Konsole</li>
                   <li onClick={()=>{this.openApp("MUSIC")}}>Winamp</li>
                 </div>
               </li>
@@ -177,11 +189,11 @@ export default class App extends Component {
             <img src={folder} alt=""/>
             <p>MIDI</p>
           </li>
-          <li>
+          <li onDoubleClick={()=>{this.openApp("Konsole")}}>
             <img src={termial} alt=""/>
             <p>Konsole</p>
           </li>
-          <li onClick={()=>{this.openApp("MediaPlayer",mv)}}>
+          <li onDoubleClick={()=>{this.openApp("MediaPlayer",mv)}}>
             <img src={termial} alt=""/>
             <p>test-video.sh</p>
           </li>
