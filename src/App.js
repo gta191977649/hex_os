@@ -20,6 +20,9 @@ import Browser from "./apps/Browser"
 import HexMediaPlayer from "./apps/HexMediaPlayer/HexMediaPlayer"
 import Konsole from "./apps/Konsole/Konsole"
 
+//Compoments
+import MessageBox from "./compoments/MessageBox"
+
 //test mv
 import mv from "./disk/video/✩  恋をしよう   LIP×LIP  歌ってみた　 ver.かぴ.1080p.mp4"
 export default class App extends Component {
@@ -47,6 +50,15 @@ export default class App extends Component {
     let process = this.state.process
     let pid = process.length
     switch(name) {
+      case "UNKNOWN": {
+        process.push({
+          "title":"Message Box",
+          "pid":pid,
+          "pointer": <MessageBox title="実装されていないの機能" content="この機能は現在開発中です。" x={this.state.mouse_x} y={this.state.mouse_y} onClose={()=>{this.closeApp(pid)}} key={pid}/>
+        })
+        this.setState({process:process})
+        break
+      }
       case "ABOUT":{
         process.push({
           "title":"About HEX OS",
@@ -132,7 +144,7 @@ export default class App extends Component {
                 <div className="hex-menu-dropdown">
                   <li onClick={()=>{this.openApp("ABOUT")}}>このHEXについて</li>
                   <hr/>
-                  <li>システム設置</li>
+                  <li onClick={()=>{this.openApp("UNKNOWN")}}>システム設置</li>
                 </div>
               </li>
               <li>

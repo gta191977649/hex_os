@@ -3,7 +3,7 @@
   width: 100%;
   height: 100%;
   background-color: #295d70;
-  background-image: url(../img/wall-redos.jpeg);
+  background-image: url(../img/wall-cat.jpg);
   background-position: center center;
   background-size: cover;
   top: 0px;
@@ -182,7 +182,7 @@
   background-color: rgba(95,134,150, 0.3);
 }
 .hex-gird li img{
-  width: 60px;
+  width: 50px;
   margin: 0px;
   padding: 0px;
 }
@@ -193,6 +193,7 @@
   padding: 0px;
   font-weight: normal;
   text-shadow: 0px 2px 3px black;
+  font-size: 14px;
 }
 
 .hex-desktop-version {
