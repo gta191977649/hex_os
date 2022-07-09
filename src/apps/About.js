@@ -13,7 +13,7 @@ export default class About extends Component {
                     <table style={about}>
                         <tr>
                             <td style={{textAlign:"left"}}><strong>Version:</strong></td>
-                            <td style={{textAlign:"right"}}>0.1 alpha</td>
+                            <td style={{textAlign:"right"}}>Development Version</td>
                         </tr>
                         <tr>
                             <td style={{textAlign:"left"}}><strong>Built-in Memory:</strong></td>

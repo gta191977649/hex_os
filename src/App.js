@@ -224,10 +224,10 @@ export default class App extends Component {
           </li>
         </div>
         <div className="hex-desktop-version">
-          HEX OS (Alpha)
+          HEX OS #Alpha
           <br/>
-          Build: 502<br/>
-          Powered by: Project Sparrow 2020
+          Kernel Build Ver: 502<br/>
+          Okamei Project 2022
         </div>
         {
           this.state.process.map((app,pid)=>{
