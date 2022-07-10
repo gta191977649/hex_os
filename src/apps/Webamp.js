@@ -7,6 +7,7 @@ import song_2 from "../disk/music/中山忍 - 負けないで,勇気.mp3"
 import song_3 from "../disk/music/南野陽子 - 瞳のなかの未来.mp3"
 import song_4 from "../disk/music/桐生一馬 - ばかみたい .mp3"
 import song_5 from "../disk/music/竹内まりや - Single Again.mp3"
+import song_6 from "../disk/music/島国 - 旺載山芸術団.mp3"
   
 
 const { useState, useEffect } = React;
@@ -46,6 +47,13 @@ const config = {
         title: "Single Again",
       },
       url: song_5,
+    },
+    {
+      metaData: {
+        artist: "島国",
+        title: "旺載山芸術団",
+      },
+      url: song_6,
     },
   ],
 };
