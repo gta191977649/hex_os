@@ -51,8 +51,8 @@ export default class Konsole extends Component {
                 <Terminal
                     className="hex-konsole"
                     commands={commands}
-                    welcomeMessage={`HEX OS [Version 0.1.502]\n(c) 1997-${new Date().getFullYear()} 禾雀飛躍 著作権所有。\n输入「help」显示全部可用指令。`}
-                    promptLabel={'nurupo@HEX:~$'}
+                    welcomeMessage={`Gossypium OS [Version 0.1.502]\n(c) 1997-${new Date().getFullYear()} 禾雀飛躍 著作権所有。\n输入「help」显示全部可用指令。`}
+                    promptLabel={'nurupo@MHY:~$'}
                     noAutoScroll={false}
                     style={{height:"100%",textAlign:"left",borderRadius:"0px",backgroundColor:"black"}}
                 />

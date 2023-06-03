@@ -11,16 +11,16 @@ export default class Window extends Component {
   }
 
   render() {
-    const controls = <div className="hex-window-controls">
+    const controls = <div className="hex-window-controls" onClick={this.props.onClose}>
     <a href="#" onClick={this.props.onClose}>X</a>
     </div>
     return (
      
       <Rnd  dragHandleClassName="hex-window-title"  enableResizing={this.props.enableResizing} style={style} default={{x:this.props.x,y:this.props.y,width:this.props.width,height:this.props.height}}>
         <div className="hex-window" >
-          <div className="hex-window-title">
-          {this.props.control ? controls : ""}
-          {this.props.title}
+          <div className="hex-window-title" stlye={{"--left":"20"}}>
+            <div className="text"><span>{this.props.title}</span></div>
+            {this.props.control ? controls : ""}
           </div>
           <div className="hex-window-content" style={{ textAlign: "center" }}>
             {this.props.content}

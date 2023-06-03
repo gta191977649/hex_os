@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import Window from "../compoments/Window"
-import logo from "../res/img/icons/os_logo.png"
+import logo from "../icon/os.png"
 export default class About extends Component {
     render() {
         return (
@@ -8,7 +8,7 @@ export default class About extends Component {
                 <div className="hex-os-about" style={{padding:"5px"}}>
                    <div className="hex-os-banner" style={banner}>
 
-                    <img src={logo}/>
+                    <img width={300} src={logo}/>
                    </div>
                     <table style={about}>
                         <tr>
